@@ -36,9 +36,9 @@
     @stack('scripts')
 
 
-    <footer class="footer bg-dark text-white py-3">
+    <footer class="footer bg-dark fixed-bottom text-white py-3">
         <div class="container">
-            <p class="text-center mb-0">&copy; {{ date('Y') }} Your Company. All rights reserved.</p>
+            <p class="text-center mb-0">&copy; {{ date('Y') }} Readers Club. All rights reserved.</p>
         </div>
     </footer>
 </body>

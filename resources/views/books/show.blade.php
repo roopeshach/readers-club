@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <p>{{ $comment->content }}</p>
                         <p><small>By {{ $comment->user->name }}</small></p>
-                        @if (Auth::id() == $comment->user_id || Auth::user()->role == 'super_user')
+                        @if (Auth::id() == $comment->user_id || Auth::user()->role == 'admin')
                             <form action="{{ route('comments.destroy', [$book->id, $comment->id]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')

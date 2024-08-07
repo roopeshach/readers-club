@@ -8,24 +8,31 @@ use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
-    public function __construct()
+    public function index(Request $request)
     {
-        $this->middleware('role:admin', ['except' => ['index', 'show']]);
-    }
+        $query = Category::query();
 
-    public function index()
-    {
-        $categories = Category::paginate(10);
+        // Handle search
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query->where('name', 'LIKE', "%{$search}%");
+        }
+
+        $categories = $query->paginate(10); // Paginate the results
+
         return view('categories.index', compact('categories'));
     }
 
     public function create()
     {
+        $this->authorize('create', Category::class);
         return view('categories.create');
     }
 
     public function store(Request $request)
     {
+        $this->authorize('create', Category::class);
+
         $request->validate([
             'name' => 'required|string|max:255|unique:categories',
         ]);
@@ -43,11 +50,14 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
+        $this->authorize('update', $category);
         return view('categories.edit', compact('category'));
     }
 
     public function update(Request $request, Category $category)
     {
+        $this->authorize('update', $category);
+
         $request->validate([
             'name' => 'required|string|max:255|unique:categories,name,' . $category->id,
         ]);
@@ -59,6 +69,8 @@ class CategoryController extends Controller
 
     public function destroy(Category $category)
     {
+        $this->authorize('delete', $category);
+
         $category->delete();
         return redirect()->route('categories.index')->with('success', 'Category deleted successfully.');
     }

@@ -29,7 +29,7 @@ class BookController extends Controller
             $query->where('category_id', $categoryId);
         }
 
-        $books = $query->paginate(7); // Paginate the results
+        $books = $query->paginate(5); // Paginate the results
         $categories = Category::all(); // Fetch all categories for filtering
 
         return view('books.index', compact('books', 'categories'));
@@ -70,6 +70,11 @@ class BookController extends Controller
 
     public function show(Book $book)
     {
+        // if not authenticated redirect home
+        if (!Auth::check()) {
+            return redirect()->route('home');
+        }
+
         // Increment the views count
         $book->incrementViews();
 

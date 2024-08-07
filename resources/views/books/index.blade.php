@@ -9,18 +9,18 @@ table.dataTable thead .sorting_desc {
     background: none;
 }
 </style>
-<div class="container-fluid m-2">
+<div class="container-fluid">
     <div class="row">
         <!-- Sidebar for Categories -->
         <div class="col-md-2">
             <h5>Filter by Category:</h5>
             <ul class="list-group mb-3">
                 <li class="list-group-item">
-                    <a href="{{ route('books.index') }}">Show All</a>
+                    <a class="btn btn-lg btn-warning"  href="{{ route('books.index') }}">Show All</a>
                 </li>
                 @foreach ($categories as $category)
-                    <li class="list-group-item">
-                        <a href="{{ route('books.index', ['category' => $category->id]) }}">{{ $category->name }}</a>
+                    <li class="list-group-item ">
+                        <a class="btn btn-lg btn-light" href="{{ route('books.index', ['category' => $category->id]) }}">{{ $category->name }}</a>
                     </li>
                 @endforeach
             </ul>
@@ -59,7 +59,7 @@ table.dataTable thead .sorting_desc {
                 <tbody>
                     @foreach ($books as $book)
                         <tr>
-                            <td><img src="{{ asset($book->cover_art) }}" alt="{{ $book->title }}" style="height: 50px;"></td>
+                            <td><img src="{{ asset($book->cover_art) }}" alt="{{ $book->title }}" style="height: 100px;"></td>
                             <td>{{ $book->title }}</td>
                             <td>{{ $book->author }}</td>
                             <td>{{ $book->category->name }}</td>

@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Book;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class BookPolicy
+class CategoryPolicy
 {
     use HandlesAuthorization;
 
@@ -15,10 +15,9 @@ class BookPolicy
         return true;
     }
 
-    public function view(User $user, Book $book)
+    public function view(User $user, Category $category)
     {
-        // must login
-        return $user->isAuthenticated();
+        return true;
     }
 
     public function create(User $user)
@@ -26,12 +25,12 @@ class BookPolicy
         return $user->isAdmin();
     }
 
-    public function update(User $user, Book $book)
+    public function update(User $user, Category $category)
     {
         return $user->isAdmin();
     }
 
-    public function delete(User $user, Book $book)
+    public function delete(User $user, Category $category)
     {
         return $user->isAdmin();
     }

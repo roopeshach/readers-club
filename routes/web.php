@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
