@@ -1,0 +1,177 @@
+{
+    "users": [
+        {
+            "name": "abc",
+            "email": "abchih@ulster.ac.uk",
+            "password": "password1234",
+            "role": "user"
+        },
+        {
+            "name": "admin_abc",
+            "email": "admin@readers-club.com",
+            "password": "superuser1234",
+            "role": "admin"
+        }
+    ],
+    "categories": [
+        "Fiction",
+        "Non-Fiction",
+        "Science",
+        "History",
+        "Fantasy"
+    ],
+    "books": [
+        {
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "isbn": "9780061120084",
+            "publisher": "J.B. Lippincott & Co.",
+            "edition": 1,
+            "category": "Fiction",
+            "user_email": "abchih@ulster.ac.uk",
+            "cover_art": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr_OEyiITviY06maP296zOr2aesR2dTnx5Tw&s"
+        },
+        {
+            "title": "1984",
+            "author": "George Orwell",
+            "isbn": "9780451524935",
+            "publisher": "Secker & Warburg",
+            "edition": 1,
+            "category": "Fiction",
+            "user_email": "admin@readers-club.com",
+            "cover_art": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkrBY9o8BI8rV9CQmdegHCLnh7BY4vaiAUrg&s"
+        },
+        {
+            "title": "Sapiens: A Brief History of Humankind",
+            "author": "Yuval Noah Harari",
+            "isbn": "9780062316097",
+            "publisher": "Harper",
+            "edition": 1,
+            "category": "Non-Fiction",
+            "user_email": "abchih@ulster.ac.uk",
+            "cover_art": "https://static-01.daraz.com.np/p/92f3db4d003e0eec583ef9e3213ad81c.jpg"
+        },
+        {
+            "title": "Educated",
+            "author": "Tara Westover",
+            "isbn": "9780399590504",
+            "publisher": "Random House",
+            "edition": 1,
+            "category": "Non-Fiction",
+            "user_email": "admin@readers-club.com",
+            "cover_art": ""
+        },
+        {
+            "title": "A Brief History of Time",
+            "author": "Stephen Hawking",
+            "isbn": "9780553380163",
+            "publisher": "Bantam",
+            "edition": 1,
+            "category": "Science",
+            "user_email": "abchih@ulster.ac.uk",
+            "cover_art": "https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg"
+        },
+        {
+            "title": "The Selfish Gene",
+            "author": "Richard Dawkins",
+            "isbn": "9780198788607",
+            "publisher": "Oxford University Press",
+            "edition": 1,
+            "category": "Science",
+            "user_email": "admin@readers-club.com",
+            "cover_art": "https://images-na.ssl-images-amazon.com/images/I/71X5xdteBBL.jpg"
+        },
+        {
+            "title": "The History of the Ancient World",
+            "author": "Susan Wise Bauer",
+            "isbn": "9780393059748",
+            "publisher": "W. W. Norton & Company",
+            "edition": 1,
+            "category": "History",
+            "user_email": "abchih@ulster.ac.uk",
+            "cover_art": "https://m.media-amazon.com/images/I/71OXQZezcnL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "title": "Guns, Germs, and Steel",
+            "author": "Jared Diamond",
+            "isbn": "9780393317556",
+            "publisher": "W. W. Norton & Company",
+            "edition": 1,
+            "category": "History",
+            "user_email": "admin@readers-club.com",
+            "cover_art": "https://m.media-amazon.com/images/I/61V8g4GgqdL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "title": "The Hobbit",
+            "author": "J.R.R. Tolkien",
+            "isbn": "9780547928227",
+            "publisher": "Houghton Mifflin Harcourt",
+            "edition": 1,
+            "category": "Fantasy",
+            "user_email": "abchih@ulster.ac.uk",
+            "cover_art": "https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg"
+        },
+        {
+            "title": "Harry Potter and the Sorcerer's Stone",
+            "author": "J.K. Rowling",
+            "isbn": "9780590353427",
+            "publisher": "Scholastic",
+            "edition": 1,
+            "category": "Fantasy",
+            "user_email": "admin@readers-club.com",
+            "cover_art": "https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg"
+        }
+    ],
+    "comments": [
+        {
+            "content": "This is a comment.",
+            "user_email": "abchih@ulster.ac.uk",
+            "book_title": "To Kill a Mockingbird"
+        },
+        {
+            "content": "This is another comment.",
+            "user_email": "admin@readers-club.com",
+            "book_title": "1984"
+        },
+        {
+            "content": "Fascinating read!",
+            "user_email": "abchih@ulster.ac.uk",
+            "book_title": "Sapiens: A Brief History of Humankind"
+        },
+        {
+            "content": "Very inspiring.",
+            "user_email": "admin@readers-club.com",
+            "book_title": "Educated"
+        },
+        {
+            "content": "A mind-blowing book.",
+            "user_email": "abchih@ulster.ac.uk",
+            "book_title": "A Brief History of Time"
+        },
+        {
+            "content": "Great insights.",
+            "user_email": "admin@readers-club.com",
+            "book_title": "The Selfish Gene"
+        },
+        {
+            "content": "Loved the historical perspective.",
+            "user_email": "abchih@ulster.ac.uk",
+            "book_title": "The History of the Ancient World"
+        },
+        {
+            "content": "Eye-opening!",
+            "user_email": "admin@readers-club.com",
+            "book_title": "Guns, Germs, and Steel"
+        },
+        {
+            "content": "A timeless classic.",
+            "user_email": "abchih@ulster.ac.uk",
+            "book_title": "The Hobbit"
+        },
+        {
+            "content": "Magical and exciting.",
+            "user_email": "admin@readers-club.com",
+            "book_title": "Harry Potter and the Sorcerer's Stone"
+        }
+    ]
+}
