@@ -1,0 +1,50 @@
+{
+    "authors": [
+        {"name": "Martin Fowler", "biography": "He is a software developer, author and international speaker on software development, specializing in object-oriented analysis and design, UML, patterns, and agile software development methodologies."},
+        {"name": "Robert C. Martin", "biography": "He is an American software engineer and author. He is a co-author of the Agile Manifesto. He now runs a consulting firm called Object Mentor."},
+        {"name": "Andrew Hunt", "biography": "He is an American software developer best known as one of the authors of The Pragmatic Programmer. He and David Thomas are co-authors of the book The Pragmatic Programmer."},
+        {"name": "David Thomas", "biography": "He is an American software developer best known as one of the authors of The Pragmatic Programmer. He and Andrew Hunt are co-authors of the book The Pragmatic Programmer."},
+        {"name": "Kent Beck", "biography": "He is an American software engineer and the creator of extreme programming, a software development methodology that eschews rigid formal specification for a collaborative and iterative design process."},
+        {"name": "Eric Evans", "biography": "He is an American software developer and author, known for his work on domain-driven design (DDD)."},
+        {"name": "Joshua Bloch", "biography": "He is a software engineer and a technology author, formerly employed at Sun Microsystems and Google. He led the design and implementation of numerous Java platform features, including the Java Collections Framework and the java.math package."},
+        {"name": "Steve McConnell", "biography": "He is an American software engineer, author and consultant, best known for being the author of Code Complete, a software development book."},
+        {"name": "Uncle Bob", "biography": "He is an American software engineer and instructor. He is best known for being one of the authors of the Agile Manifesto and for developing several software design principles."},
+        {"name": "Sandi Metz", "biography": "She is an American software developer, author, and international speaker. She is best known for her book Practical Object-Oriented Design in Ruby."}
+    ],
+    "categories": [
+        {"name": "Software Engineering"},
+        {"name": "Agile"},
+        {"name": "Design Patterns"},
+        {"name": "Refactoring"},
+        {"name": "Programming"},
+        {"name": "Architecture"},
+        {"name": "Databases"},
+        {"name": "DevOps"},
+        {"name": "Web Development"},
+        {"name": "Cloud Computing"}
+    ],
+    "books": [
+        {
+            "title": "Refactoring: Improving the Design of Existing Code",
+            "isbn": "9780134757599",
+            "publisher": "Addison-Wesley",
+            "edition": 2,
+            "category": "Refactoring",
+            "author": "Martin Fowler",
+            "user_email": "admin@readers-club.com",
+            "cover_art": "https://example.com/images/refactoring.jpg",
+            "views": 100
+        },
+        {
+            "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+            "isbn": "9780132350884",
+            "publisher": "Prentice Hall",
+            "edition": 1,
+            "category": "Programming",
+            "author": "Robert C. Martin",
+            "user_email": "abc@ulster.ac.uk",
+            "cover_art": "https://example.com/images/clean-code.jpg",
+            "views": 200
+        }
+    ]
+}
