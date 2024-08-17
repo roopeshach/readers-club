@@ -1,0 +1,22 @@
+[
+    {
+        "book_name": "Clean Code",
+        "book_code": "9780132350884",
+        "published_by": "Robert C. Martin",
+        "release_version": 1,
+        "genre_id": 1,
+        "owner_id": 1,
+        "image_path": "covers/clean-code.jpg",
+        "view_count": 123
+    },
+    {
+        "book_name": "The Pragmatic Programmer",
+        "book_code": "9780201616224",
+        "published_by": "Andrew Hunt",
+        "release_version": 1,
+        "genre_id": 2,
+        "owner_id": 2,
+        "image_path": "covers/pragmatic-programmer.jpg",
+        "view_count": 234
+    }
+]

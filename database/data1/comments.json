@@ -1,0 +1,12 @@
+[
+    {
+        "book_reference": 1,
+        "commenter_id": 2,
+        "comment_text": "This book is a must-read for software developers."
+    },
+    {
+        "book_reference": 2,
+        "commenter_id": 1,
+        "comment_text": "Excellent book with practical advice."
+    }
+]
