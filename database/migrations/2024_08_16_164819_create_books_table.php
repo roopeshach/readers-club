@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->integer('edition');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('author_id')->constrained();
-            $table->foreignId('user_id')->constrained(); // Assuming books are added by users
+            $table->foreignId('user_id')->constrained(); //  books are added by users
             $table->string('cover_art')->nullable();
             $table->integer('views')->default(0);
             $table->timestamps();

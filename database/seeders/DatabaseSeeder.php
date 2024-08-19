@@ -13,11 +13,11 @@ class DatabaseSeeder extends Seeder
     {
         // Call individual seeders
         $this->call([
+            UserSeeder::class,
             AuthorSeeder::class,
             BookSeeder::class,
             CategorySeeder::class,
             ReviewSeeder::class,
-            UserSeeder::class,
         ]);
     }
 }

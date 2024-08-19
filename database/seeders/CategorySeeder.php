@@ -10,7 +10,7 @@ class CategorySeeder extends Seeder
 {
     public function run(): void
     {
-        $dataFile = database_path('data/data.json');
+        $dataFile = database_path('data.json');
         
         if (File::exists($dataFile)) {
             $data = json_decode(File::get($dataFile), true);
@@ -21,7 +21,7 @@ class CategorySeeder extends Seeder
             }
         } else {
             // Generate 10 categories using the factory
-            Category::factory()->count(10)->create();
+            // Category::factory()->count(0)->create();
         }
     }
 }

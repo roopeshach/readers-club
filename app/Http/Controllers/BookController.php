@@ -61,6 +61,8 @@ class BookController extends Controller
                             ->where('id', '!=', $book->id)
                             ->paginate(6); // Show 6 related books
 
+        
+
         return view('books.show', compact('book', 'categoryBooks'));
     }
 

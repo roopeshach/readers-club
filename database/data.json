@@ -46,5 +46,26 @@
             "cover_art": "https://example.com/images/clean-code.jpg",
             "views": 200
         }
+    ],
+    "reviews": [
+        {
+            "book_isbn": "9780134757599",
+            "user_email": "abc@ulster.ac.uk",
+            "rating": 5,
+            "content": "This book is a must-read for every software developer."
+        },
+        {
+            "book_isbn": "9780132350884",
+            "user_email": "abc@ulster.ac.uk",
+            "rating": 4,
+            "content": "This book is a great resource for writing clean code."
+        },
+        {
+            "book_isbn": "9780134757599",
+            "user_email": "abc@ulster.ac.uk",
+            "rating": 5,
+            "content": "This book is a great resource for refactoring code."
+        }
+
     ]
 }

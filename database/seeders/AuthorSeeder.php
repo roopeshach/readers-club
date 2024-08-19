@@ -20,12 +20,11 @@ class AuthorSeeder extends Seeder
                 Author::updateOrCreate(
                     ['name' => $authorData['name']],
                     ['biography' => $authorData['biography']]
-                
                 );
             }
         } else {
             // Generate 10 authors using the factory
-            Author::factory()->count(10)->create();
+            // Author::factory()->count(0)->create();
         }
     }
 }

@@ -13,7 +13,7 @@ class BookSeeder extends Seeder
 {
     public function run(): void
     {
-        $dataFile = database_path('data/data.json');
+        $dataFile = database_path('data.json');
 
         if (File::exists($dataFile)) {
             $data = json_decode(File::get($dataFile), true);
@@ -43,7 +43,7 @@ class BookSeeder extends Seeder
             }
         } else {
             // Generate 50 books using the factory
-            Book::factory()->count(50)->create();
+            // Book::factory()->count(0)->create();
         }
     }
 }
