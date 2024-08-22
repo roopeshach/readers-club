@@ -1,0 +1,42 @@
+[
+    {
+        "book_title": "Learning PHP, MySQL & JavaScript",
+        "book_code": "978-1-491-92029-6",
+        "publisher_id": 1,
+        "category_id": 1,
+        "owner_id": 1,
+        "views_count": 245
+    },
+    {
+        "book_title": "Python for Data Analysis",
+        "book_code": "978-1-491-95238-7",
+        "publisher_id": 2,
+        "category_id": 1,
+        "owner_id": 1,
+        "views_count": 512
+    },
+    {
+        "book_title": " Code Python",
+        "book_code": "978-0-13-235088-4",
+        "publisher_id": 3,
+        "category_id": 2,
+        "owner_id": 2,
+        "views_count": 780
+    },
+    {
+        "book_title": "GoodProgrammer",
+        "book_code": "978-0-13-595705-9",
+        "publisher_id": 3,
+        "category_id": 2,
+        "owner_id": 2,
+        "views_count": 659
+    },
+    {
+        "book_title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "book_code": "978-0-201-63361-0",
+        "publisher_id": 1,
+        "category_id": 2,
+        "owner_id": 1,
+        "views_count": 340
+    }
+]

@@ -14,7 +14,6 @@ class Book extends Model
         'publisher_id',
         'category_id',
         'owner_id',
-        'cover_image_path',
         'views_count',
     ];
     

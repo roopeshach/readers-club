@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\BookCategory;
+
+use App\Models\Comment;
 use App\Models\Publisher;
 use Illuminate\Http\Request;
+
 
 class BookController extends Controller
 {
     public function index() {
-        $books = Book::with(['category', 'publisher', 'owner'])->paginate(10);
+        $books = Book::all();
         return view('books.index', compact('books'));
     }
 
@@ -26,14 +29,9 @@ class BookController extends Controller
             'book_code' => 'required|unique:books',
             'publisher_id' => 'required',
             'category_id' => 'required',
-            'cover_image_path' => 'nullable|image',
         ]);
 
         $data['owner_id'] = auth()->id();
-
-        if ($request->hasFile('cover_image_path')) {
-            $data['cover_image_path'] = $request->file('cover_image_path')->store('covers', 'public');
-        }
 
         Book::create($data);
 
@@ -57,12 +55,7 @@ class BookController extends Controller
             'book_code' => 'required|unique:books,book_code,' . $book->id,
             'publisher_id' => 'required',
             'category_id' => 'required',
-            'cover_image_path' => 'nullable|image',
         ]);
-
-        if ($request->hasFile('cover_image_path')) {
-            $data['cover_image_path'] = $request->file('cover_image_path')->store('covers', 'public');
-        }
 
         $book->update($data);
 
@@ -70,12 +63,19 @@ class BookController extends Controller
     }
 
     public function destroy(Book $book) {
-        if ($book->cover_image_path) {
-            \Storage::disk('public')->delete($book->cover_image_path);
-        }
-
+        
         $book->delete();
 
         return redirect()->route('books.index')->with('success', 'Book deleted successfully.');
+    }
+
+    public function destroyComment(Book $book, Comment $comment) {
+        // Ensure that the comment belongs to the book and the user has permission
+        if ($comment->book_id == $book->id && auth()->user()->can('delete', $comment)) {
+            $comment->delete();
+            return redirect()->route('books.show', $book->id)->with('success', 'Comment deleted successfully.');
+        }
+
+        return redirect()->route('books.show', $book->id)->with('error', 'You are not authorized to delete this comment.');
     }
 }

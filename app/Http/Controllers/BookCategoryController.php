@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BookCategoryController extends Controller
 {
     public function index() {
-        $categories = BookCategory::paginate(10);
+        $categories = BookCategory::all();
         return view('book_categories.index', compact('categories'));
     }
 

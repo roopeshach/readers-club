@@ -1,0 +1,52 @@
+[
+    {
+        "book_id": 1,
+        "comment_user_id": 1,
+        "comment_content": "This is an amazing book. I learned so much about clean code principles."
+    },
+    {
+        "book_id": 1,
+        "comment_user_id": 2,
+        "comment_content": "I found this book very helpful in understanding object-oriented design patterns."
+    },
+    {
+        "book_id": 2,
+        "comment_user_id": 1,
+        "comment_content": "Great book for beginners! It explains Python basics very clearly."
+    },
+    {
+        "book_id": 2,
+        "comment_user_id": 1,
+        "comment_content": "The examples are very practical and easy to follow. Highly recommended for anyone new to Python."
+    },
+    {
+        "book_id": 3,
+        "comment_user_id": 1,
+        "comment_content": "A must-read for any software developer. The advice in this book is timeless."
+    },
+    {
+        "book_id": 3,
+        "comment_user_id": 2,
+        "comment_content": "This book completely changed the way I approach coding. Clean Code is essential for writing maintainable software."
+    },
+    {
+        "book_id": 4,
+        "comment_user_id": 1,
+        "comment_content": "The Pragmatic Programmer is full of practical advice that every developer should know."
+    },
+    {
+        "book_id": 4,
+        "comment_user_id": 2,
+        "comment_content": "This book offers great insights into the mindset of a good programmer."
+    },
+    {
+        "book_id": 5,
+        "comment_user_id": 1,
+        "comment_content": "Design Patterns is a bit heavy but definitely worth the read if you're serious about software development."
+    },
+    {
+        "book_id": 5,
+        "comment_user_id": 3,
+        "comment_content": "A classic book that every developer should have in their library. It helped me a lot in understanding design patterns."
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "admin_abc",
+        "email": "admin@readers-club.com",
+        "password": "superuser1234",
+        "role": "admin"
+    },
+    {
+        "name": "abc",
+        "email": "abc@ulster.ac.uk",
+        "password": "password1234",
+        "role": "user"
+    },
+    {
+        "name": "def",
+        "email": "def@ulster.ac.uk",
+        "password": "password1234",
+        "role": "user"
+    }
+]

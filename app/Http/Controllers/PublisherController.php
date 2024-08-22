@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PublisherController extends Controller
 {
     public function index() {
-        $publishers = Publisher::paginate(10);
+        $publishers = Publisher::all();
         return view('publishers.index', compact('publishers'));
     }
 
