@@ -1,0 +1,27 @@
+[
+    {
+        "book_id": 1,
+        "comment_user_id": 2,
+        "comment_content": "A fascinating exploration of the future of humanity."
+    },
+    {
+        "book_id": 2,
+        "comment_user_id": 1,
+        "comment_content": "An enchanting tale of magic and friendship."
+    },
+    {
+        "book_id": 3,
+        "comment_user_id": 2,
+        "comment_content": "A classic mystery novel with a brilliant plot."
+    },
+    {
+        "book_id": 4,
+        "comment_user_id": 1,
+        "comment_content": "A thought-provoking analysis of success and the factors that contribute to it."
+    },
+    {
+        "book_id": 5,
+        "comment_user_id": 2,
+        "comment_content": "An inspiring biography of one of the most influential figures in technology."
+    }
+]

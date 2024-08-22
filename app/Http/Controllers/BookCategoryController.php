@@ -31,27 +31,27 @@ class BookCategoryController extends Controller
         return redirect()->route('book_categories.index')->with('success', 'Category created successfully.');
     }
 
-    public function edit(BookCategory $category)
+    public function edit(BookCategory $book_category)
     {
-        return view('book_categories.edit', compact('category'));
+        return view('book_categories.edit', compact('book_category'));
     }
 
-    public function update(Request $request, BookCategory $category)
+    public function update(Request $request, BookCategory $book_category)
     {
         $request->validate([
-            'category_name' => 'required|string|max:255|unique:book_categories,category_name,' . $category->id,
+            'category_name' => 'required|string|max:255|unique:book_categories,category_name,' . $book_category->id,
         ]);
 
-        $category->update([
+        $book_category->update([
             'category_name' => $request->category_name,
         ]);
 
         return redirect()->route('book_categories.index')->with('success', 'Category updated successfully.');
     }
 
-    public function destroy(BookCategory $category)
+    public function destroy(BookCategory $book_category)
     {
-        $category->delete();
+        $book_category->delete();
         return redirect()->route('book_categories.index')->with('success', 'Category deleted successfully.');
     }
 }

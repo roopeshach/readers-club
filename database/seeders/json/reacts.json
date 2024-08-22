@@ -1,0 +1,27 @@
+[
+    {
+        "book_id": 1,
+        "react_user_id": 2,
+        "reaction_type": "like"
+    },
+    {
+        "book_id": 2,
+        "react_user_id": 1,
+        "reaction_type": "love"
+    },
+    {
+        "book_id": 3,
+        "react_user_id": 2,
+        "reaction_type": "happy"
+    },
+    {
+        "book_id": 4,
+        "react_user_id": 1,
+        "reaction_type": "like"
+    },
+    {
+        "book_id": 5,
+        "react_user_id": 2,
+        "reaction_type": "love"
+    }
+]

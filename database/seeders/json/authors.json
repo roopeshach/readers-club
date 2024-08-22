@@ -1,0 +1,22 @@
+[
+    {
+        "author_name": "Isaac Asimov",
+        "author_bio": "Isaac Asimov was an American writer and professor of biochemistry, known for his works of science fiction and popular science."
+    },
+    {
+        "author_name": "J.K. Rowling",
+        "author_bio": "J.K. Rowling is a British author, best known for writing the Harry Potter fantasy series."
+    },
+    {
+        "author_name": "Agatha Christie",
+        "author_bio": "Agatha Christie was an English writer known for her sixty-six detective novels and fourteen short story collections."
+    },
+    {
+        "author_name": "Malcolm Gladwell",
+        "author_bio": "Malcolm Gladwell is a Canadian journalist, author, and public speaker, known for his books on psychology and sociology."
+    },
+    {
+        "author_name": "Walter Isaacson",
+        "author_bio": "Walter Isaacson is an American author, journalist, and professor, known for his biographical works."
+    }
+]
