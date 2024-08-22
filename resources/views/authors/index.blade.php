@@ -21,12 +21,16 @@
                         <td>{{ $author->biography }}</td>
                         <td>
                             <a href="{{ route('authors.show', $author) }}" class="btn btn-info btn-sm">View</a>
-                            <a href="{{ route('authors.edit', $author) }}" class="btn btn-warning btn-sm">Edit</a>
-                            <form action="{{ route('authors.destroy', $author) }}" method="POST" class="d-inline">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                            </form>
+                            @can('update', $author)
+                                <a href="{{ route('authors.edit', $author) }}" class="btn btn-warning btn-sm">Edit</a>
+                            @endcan
+                            @can('delete', $author)
+                                <form action="{{ route('authors.destroy', $author) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            @endcan
                         </td>
                     </tr>
                     @endforeach

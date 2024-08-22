@@ -36,20 +36,24 @@ class BookController extends Controller
             'category_id' => 'required|exists:categories,id',
             'description' => 'nullable|string',
             'published_year' => 'nullable|integer',
-            'cover_art' => 'nullable|image|max:2048' // Validate image size
+            'cover_art' => 'nullable|image|max:2048', // Validate image size
         ]);
-
+    
         // Handle the cover art file upload if present
         $data = $request->all();
         if ($request->hasFile('cover_art')) {
             $data['cover_art'] = $request->file('cover_art')->store('covers');
         }
-
+    
+        // Add the user_id to the data array
+        $data['user_id'] = Auth::id();
+    
         // Create a new book record
         Book::create($data);
-
+    
         return redirect()->route('books.index')->with('success', 'Book created successfully.');
     }
+    
 
     public function show(Book $book)
     {

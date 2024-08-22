@@ -14,7 +14,7 @@
                 </p>
             @else
                 <p class="lead">Welcome back, {{ Auth::user()->name }}!</p>
-                <a href="{{ route('home') }}" class="btn btn-success btn-lg">Go to Books</a>
+                <a href="{{ route('books.index') }}" class="btn btn-success btn-lg">Go to Books</a>
             @endguest
         </div>
 
@@ -27,7 +27,8 @@
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">{{ $book->title }}</h5>
                             </div>
-                            <p class="mb-1">Author: {{ $book->category }}</p>
+                            <p class="mb-1">Author: {{ $book->author->name }}</p>
+                            <small>Category: {{ $book->category->name }}</small>
                         </a>
                     @empty
                         <div class="alert alert-warning" role="alert">

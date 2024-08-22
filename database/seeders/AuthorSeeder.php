@@ -10,7 +10,7 @@ class AuthorSeeder extends Seeder
 {
     public function run(): void
     {
-        $dataFile = database_path('data/data.json');
+        $dataFile = database_path('data.json');
         
         if (File::exists($dataFile)) {
             $data = json_decode(File::get($dataFile), true);
