@@ -10,7 +10,7 @@
         @foreach($books as $book)
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="{{ asset($book->image_path) }}" class="card-img-top" alt="{{ $book->book_name }}">
+                    <img src="{{ $book->image_path }}" class="card-img-top" alt="{{ $book->book_name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ $book->book_name }}</h5>
                         <p class="card-text">By {{ $book->publisher->name }}</p>
@@ -26,7 +26,7 @@
                             <form action="{{ route('books.destroy', $book->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-outline-danger ms-2">Delete</button>
+                                <button type="submit" class="btn btn-outline-danger ms-2">Delete</button>   
                             </form>
                         @endcan
                     </div>
