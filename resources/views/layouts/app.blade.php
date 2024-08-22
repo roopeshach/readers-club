@@ -38,6 +38,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('publishers.index') }}">Publishers</a>
+                            </li>
+
                       
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"

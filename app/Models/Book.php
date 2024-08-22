@@ -12,9 +12,9 @@ class Book extends Model
     protected $fillable = [
         'book_name', 
         'book_code', 
-        'published_by', 
+        'publisher_id', // Link with Publisher
         'release_version', 
-        'genre_id', 
+        'genre_id', // Link with Category (Genre)
         'owner_id', 
         'image_path', 
         'view_count',
@@ -22,7 +22,7 @@ class Book extends Model
 
     public function genre()
     {
-        return $this->belongsTo(Category::class, 'genre_id');
+        return $this->belongsTo(Category::class, 'genre_id'); // Relationship with Category
     }
 
     public function owner()
@@ -33,6 +33,11 @@ class Book extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class, 'book_reference');
+    }
+
+    public function publisher()
+    {
+        return $this->belongsTo(Publisher::class, 'publisher_id'); // Relationship with Publisher
     }
 
     public function incrementViews()

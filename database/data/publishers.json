@@ -1,0 +1,24 @@
+{
+    "publishers": [
+        {
+            "name": "Penguin Random House",
+            "location": "1745 Sydney"
+        },
+        {
+            "name": "HarperCollins",
+            "location": "195 Broadway, Sydney"
+        },
+        {
+            "name": "Macmillan Publishers",
+            "location": "120 Broadway, Darwin"
+        },
+        {
+            "name": "Simon & Schuster",
+            "location": "1230 Plymouth, Sydney"
+        },
+        {
+            "name": "Hachette Book Group",
+            "location": "1290 Broadway, Sydney"
+        }
+    ]
+}

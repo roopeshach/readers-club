@@ -6,11 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-// Public Routes
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('welcome');
+use App\Http\Controllers\PublisherController;
 
 Auth::routes();
 
@@ -41,6 +37,9 @@ Route::middleware(['auth'])->group(function () {
 
     // Category routes
     Route::resource('categories', CategoryController::class)->except(['show']);
+
+    // Publisher routes
+    Route::resource('publishers', PublisherController::class)->except(['show']);
 });
 
 // Public routes
