@@ -10,7 +10,15 @@ class Book extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'isbn', 'author', 'publisher', 'edition', 'category_id', 'cover_art', 'user_id','views',
+        'title', 
+        'isbn', 
+        'author', 
+        'publisher_id',  
+        'edition', 
+        'category_id', 
+        'cover_art', 
+        'user_id',
+        'views',
     ];
 
     public function category()
@@ -28,10 +36,14 @@ class Book extends Model
         return $this->hasMany(Comment::class);
     }
 
-       // Increment the views count
-       public function incrementViews()
-       {
+    public function incrementViews()
+    {
         $this->views = $this->views + 1;
         $this->save();
-       }
+    }
+
+    public function publisher()
+    {
+        return $this->belongsTo(Publisher::class);
+    }
 }

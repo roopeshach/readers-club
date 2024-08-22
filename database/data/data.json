@@ -2,7 +2,7 @@
     "users": [
         {
             "name": "abc",
-            "email": "abchih@ulster.ac.uk",
+            "email": "abc@ulster.ac.uk",
             "password": "password1234",
             "role": "user"
         },
@@ -20,6 +20,53 @@
         "History",
         "Fantasy"
     ],
+    "publishers": [
+        {
+            "name": "J.B. Lippincott & Co.",
+            "address": "Philadelphia, PA, USA",
+            "website": "https://example.com/jb-lippincott"
+        },
+        {
+            "name": "Secker & Warburg",
+            "address": "London, UK",
+            "website": "https://example.com/secker-warburg"
+        },
+        {
+            "name": "Harper",
+            "address": "New York, NY, USA",
+            "website": "https://example.com/harper"
+        },
+        {
+            "name": "Random House",
+            "address": "New York, NY, USA",
+            "website": "https://example.com/random-house"
+        },
+        {
+            "name": "Bantam",
+            "address": "New York, NY, USA",
+            "website": "https://example.com/bantam"
+        },
+        {
+            "name": "Oxford University Press",
+            "address": "Oxford, UK",
+            "website": "https://example.com/oxford-up"
+        },
+        {
+            "name": "W. W. Norton & Company",
+            "address": "New York, NY, USA",
+            "website": "https://example.com/ww-norton"
+        },
+        {
+            "name": "Houghton Mifflin Harcourt",
+            "address": "Boston, MA, USA",
+            "website": "https://example.com/hmh"
+        },
+        {
+            "name": "Scholastic",
+            "address": "New York, NY, USA",
+            "website": "https://example.com/scholastic"
+        }
+    ],
     "books": [
         {
             "title": "To Kill a Mockingbird",
@@ -28,7 +75,7 @@
             "publisher": "J.B. Lippincott & Co.",
             "edition": 1,
             "category": "Fiction",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "cover_art": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr_OEyiITviY06maP296zOr2aesR2dTnx5Tw&s"
         },
         {
@@ -48,7 +95,7 @@
             "publisher": "Harper",
             "edition": 1,
             "category": "Non-Fiction",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "cover_art": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY8sLDlhYj9Ro3A4jiXj8anZ7ivVAw-vNutA&s"
         },
         {
@@ -68,7 +115,7 @@
             "publisher": "Bantam",
             "edition": 1,
             "category": "Science",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "cover_art": "https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg"
         },
         {
@@ -88,7 +135,7 @@
             "publisher": "W. W. Norton & Company",
             "edition": 1,
             "category": "History",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "cover_art": "https://m.media-amazon.com/images/I/71OXQZezcnL._AC_UF1000,1000_QL80_.jpg"
         },
         {
@@ -108,7 +155,7 @@
             "publisher": "Houghton Mifflin Harcourt",
             "edition": 1,
             "category": "Fantasy",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "cover_art": "https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg"
         },
         {
@@ -125,7 +172,7 @@
     "comments": [
         {
             "content": "This is a comment.",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "book_title": "To Kill a Mockingbird"
         },
         {
@@ -135,7 +182,7 @@
         },
         {
             "content": "Fascinating read!",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "book_title": "Sapiens: A Brief History of Humankind"
         },
         {
@@ -145,7 +192,7 @@
         },
         {
             "content": "A mind-blowing book.",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "book_title": "A Brief History of Time"
         },
         {
@@ -155,7 +202,7 @@
         },
         {
             "content": "Loved the historical perspective.",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "book_title": "The History of the Ancient World"
         },
         {
@@ -165,7 +212,7 @@
         },
         {
             "content": "A timeless classic.",
-            "user_email": "abchih@ulster.ac.uk",
+            "user_email": "abc@ulster.ac.uk",
             "book_title": "The Hobbit"
         },
         {

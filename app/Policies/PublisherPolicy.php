@@ -1,37 +1,35 @@
 <?php
-
 namespace App\Policies;
 
-use App\Models\Book;
 use App\Models\User;
+use App\Models\Publisher;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class BookPolicy
+class PublisherPolicy
 {
     use HandlesAuthorization;
 
     public function viewAny(User $user)
     {
-        return true;
+        return $user->isAdmin();
     }
 
-    public function view(User $user, Book $book)
-    {
-        // must login
-        return $user->isAuthenticated();
-    }
-
-    public function create(User $user)
-    {
-        return true;
-    }
-
-    public function update(User $user, Book $book)
+    public function view(User $user, Publisher $publisher)
     {
         return $user->isAdmin();
     }
 
-    public function delete(User $user, Book $book)
+    public function create(User $user)
+    {
+        return $user->isAdmin();
+    }
+
+    public function update(User $user, Publisher $publisher)
+    {
+        return $user->isAdmin();
+    }
+
+    public function delete(User $user, Publisher $publisher)
     {
         return $user->isAdmin();
     }

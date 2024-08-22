@@ -35,7 +35,7 @@ table.dataTable thead .sorting_desc {
                 </div>
             @endif
 
-            @if (Auth::check() && Auth::user()->isAdmin())
+            @if (Auth::check())
                 <a href="{{ route('books.create') }}" class="btn btn-warning mb-3">Add New Book</a>
             @endif
 

@@ -4,6 +4,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PublisherController;
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -18,6 +19,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('books', BookController::class);
     Route::resource('categories', CategoryController::class);
+    Route::resource('publishers', PublisherController::class);
+
 
     Route::post('books/{book}/comments', [CommentController::class, 'store'])->name('comments.store');
     Route::delete('books/{book}/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');

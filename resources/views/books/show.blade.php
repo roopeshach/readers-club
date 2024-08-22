@@ -4,21 +4,20 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-        <h1 class="text-primary">{{ $book->title }}</h1>
+            <h1 class="text-primary">{{ $book->title }}</h1>
             <div class="row">
-            <div class="col">
-     
-            <img src="{{ asset($book->cover_art) }}" alt="{{ $book->title }}" class="img-fluid mb-3">
+                <div class="col">
+                    <img src="{{ asset($book->cover_art) }}" alt="{{ $book->title }}" class="img-fluid mb-3">
+                </div>
+                <div class="col mt-5">
+                    <p><strong>Author:</strong> {{ $book->author }}</p>
+                    <p><strong>Publisher:</strong> {{ $book->publisher->name }}</p>
+                    <p><strong>Edition:</strong> {{ $book->edition }}</p>
+                    <p><strong>Category:</strong> {{ $book->category->name }}</p>
+                    <p><strong>Added by:</strong> {{ $book->user->name }}</p>
+                    <p><strong>Views:</strong> {{ $book->views }}</p> <!-- Directly use $book->views -->
+                </div>
             </div>
-            <div class="col mt-5 ">
-                <p><strong>Author:</strong> {{ $book->author }}</p>
-                <p><strong>Publisher:</strong> {{ $book->publisher }}</p>
-                <p><strong>Edition:</strong> {{ $book->edition }}</p>
-                <p><strong>Category:</strong> {{ $book->category->name }}</p>
-                <p><strong>Added by:</strong> {{ $book->user->name }}</p>
-                <p><strong>Views:</strong> {{ $views }}</p>
-            </div>
-            </div>  
 
             <h2>Comments</h2>
             @foreach ($book->comments as $comment)

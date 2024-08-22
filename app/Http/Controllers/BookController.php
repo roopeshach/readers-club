@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\Publisher; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +30,7 @@ class BookController extends Controller
             $query->where('category_id', $categoryId);
         }
 
-        $books = $query->paginate(5); // Paginate the results
+        $books = $query->paginate(10); // Paginate the results
         $categories = Category::all(); // Fetch all categories for filtering
 
         return view('books.index', compact('books', 'categories'));
@@ -39,81 +40,55 @@ class BookController extends Controller
     {
         $this->authorize('create', Book::class);
         $categories = Category::all();
-        return view('books.create', compact('categories'));
+        $publishers = Publisher::all(); // Fetch all publishers
+        return view('books.create', compact('categories', 'publishers'));
     }
 
     public function store(Request $request)
     {
-        $this->authorize('create', Book::class);
-
         $request->validate([
             'title' => 'required|string|max:255',
             'isbn' => 'required|string|max:13|unique:books',
             'author' => 'required|string|max:255',
-            'publisher' => 'required|string|max:255',
+            'publisher_id' => 'required|exists:publishers,id',
             'edition' => 'required|integer',
             'category_id' => 'required|exists:categories,id',
             'cover_art' => 'nullable|image',
         ]);
-
+    
         $book = new Book($request->all());
         $book->user_id = Auth::id();
-        
+    
         if ($request->hasFile('cover_art')) {
             $book->cover_art = $request->file('cover_art')->store('covers');
         }
-        
+    
         $book->save();
-
+    
         return redirect()->route('books.index')->with('success', 'Book created successfully.');
     }
-
-    public function show(Book $book)
-    {
-        // if not authenticated redirect home
-        if (!Auth::check()) {
-            return redirect()->route('home');
-        }
-
-        // Increment the views count
-        $book->incrementViews();
-
-        // Retrieve the updated view count
-        $views = $book->views;
-
-        return view('books.show', compact('book', 'views'));
-    }
-
-    public function edit(Book $book)
-    {
-        $this->authorize('update', $book);
-
-        $categories = Category::all();
-        return view('books.edit', compact('book', 'categories'));
-    }
-
+    
     public function update(Request $request, Book $book)
     {
-        $this->authorize('update', $book);
-
         $request->validate([
             'title' => 'required|string|max:255',
             'isbn' => 'required|string|max:13|unique:books,isbn,' . $book->id,
             'author' => 'required|string|max:255',
-            'publisher' => 'required|string|max:255',
+            'publisher_id' => 'required|exists:publishers,id',
             'edition' => 'required|integer',
             'category_id' => 'required|exists:categories,id',
             'cover_art' => 'nullable|image',
         ]);
-
+    
         $book->update($request->all());
-        
+    
         if ($request->hasFile('cover_art')) {
             $book->cover_art = $request->file('cover_art')->store('covers');
         }
-
+    
         return redirect()->route('books.index')->with('success', 'Book updated successfully.');
     }
+    
 
     public function destroy(Book $book)
     {
@@ -122,4 +97,24 @@ class BookController extends Controller
         $book->delete();
         return redirect()->route('books.index')->with('success', 'Book deleted successfully.');
     }
+    public function show(Book $book)
+    {
+        $book->incrementViews();
+        return view('books.show', compact('book'));
+    }
+
+
+    public function edit(Book $book)
+    {
+        // Authorize the action
+        $this->authorize('update', $book);
+
+        // Get all categories and publishers
+        $categories = Category::all();
+        $publishers = Publisher::all(); 
+
+        // Return the edit view with the book, categories, and publishers
+        return view('books.edit', compact('book', 'categories', 'publishers'));
+    }
+
 }
